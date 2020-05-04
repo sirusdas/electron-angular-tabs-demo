@@ -1,3 +1,12 @@
+# How to run?
+  Well git clone project or download it.
+  
+  Move into the directory and open terminal. Make sure NPM is install.
+  
+  Type 'npm install or sudo npm install'
+  
+  Type npm run start:electron
+
 # concerns
 ### electron-tabs
 Issue Link: https://github.com/brrd/electron-tabs/issues/77
@@ -7,7 +16,7 @@ Working Example LINK: https://ourcodeworld.com/articles/read/925/how-to-implemen
 Example2 Link: https://github.com/Vj3k0/electron-tabs/blob/master/app.js
 
 
-#LIFESAVERS
+# LIFESAVERS
 How to Use External and Custom JavaScript in Angular
 > https://www.techiediaries.com/use-javascript-in-angular/
 > https://www.freecodecamp.org/forum/t/can-i-use-npm-packages-directly-inside-angular-2/132935
@@ -34,3 +43,11 @@ LINK: https://www.electronjs.org/docs/tutorial/application-architecture
 
 # Google Searches
 Electron native Tabs
+
+# Whats done?
+  Modules were implemented with tabs and base and tab1 as child which will have the view1. since i don't know how dynamic you       need stuffs and do you need some tempting type of logic.
+  
+  Routing was established so that we can navigate between tabs( in future)
+  
+ # What's not done?
+    Cannot display contents inside the tab because library( electron-tabs ) and the core logic was something know as Webview.
