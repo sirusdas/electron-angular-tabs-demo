@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ElectronAngularDemo</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="../node_modules/electron-tabs/electron-tabs.css">
+  <style>
+    body:{
+      margin: 0px !important;
+    }
+  </style>
+</head>
+<body style="margin:0px !important;">
+  <div class="etabs-tabgroup">
+    <div class="etabs-tabs"></div>
+    <div class="etabs-buttons"></div>
+  </div>
+  <div class="etabs-views"></div>
+  <script>
+      const TabGroup = require("electron-tabs");
+
+      // 2. Define the instance of the tab group (container)
+      let tabGroup = new TabGroup({
+          // If you want a new button that appends a new tab, include:
+          newTab: {
+              title: 'New Tab',
+              // The file will need to be local, probably a local-ntp.html file
+              // like in the Google Chrome Browser.
+
+              //src: "./some-index-file.html",
+              //visible: true,
+              //webviewAttributes: {
+              //    nodeintegration: true
+              //}
+          }
+      });
+
+      // 3. Add a tab from a website
+      let tab1 = tabGroup.addTab({
+          title: "View1",
+          src: "https://ourcodeworld.com",
+          visible: true
+      });
+
+      // 4. Add a new tab that contains a local HTML file
+      let tab2 = tabGroup.addTab({
+          title: "View2",
+          src: "./local.html",
+          visible: true,
+          // If the page needs to access Node.js modules, be sure to
+          // enable the nodeintegration
+          webviewAttributes: {
+              nodeintegration: true
+          }
+      });
+      let tab3 = tabGroup.addTab({
+          title: "View3",
+          src: "./local.html",
+          visible: true,
+          // If the page needs to access Node.js modules, be sure to
+          // enable the nodeintegration
+          webviewAttributes: {
+              nodeintegration: true
+          }
+      });
+  </script>
+  <app-root>
+  </app-root>
+
+</body>
+</html>
